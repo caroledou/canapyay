@@ -1,0 +1,2 @@
+class Sofa < ApplicationRecord
+end
