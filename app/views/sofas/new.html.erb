@@ -1,2 +1,15 @@
-<h1>Sofas#new</h1>
-<p>Find me in app/views/sofas/new.html.erb</p>
+<h1>Add a Sofa</h1>
+<%= simple_form_for(@sofa) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :location %>
+  <%= f.input :price_per_day %>
+  <%= f.input :capacity %>
+  <%= f.input :comfort %>
+  <%= f.input :age %>
+  <%= f.input :wineproof %>
+  <%= f.input :bed %>
+  <%= f.submit "Add a sofa", class: "btn btn-primary" %>
+<% end %>
+
+

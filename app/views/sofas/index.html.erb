@@ -1,2 +1,7 @@
 <h1>Sofas#index</h1>
-<p>Find me in app/views/sofas/index.html.erb</p>
+<p><% @sofas.each do |sofa|  %></p>
+  <li><%= sofa.name %></li>
+  <li><%= sofa.description %></li>
+  <li><%= sofa.price_per_day %></li>
+<% end %>
+
