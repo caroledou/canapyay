@@ -1,28 +1,23 @@
-<h1>Sofas#index</h1>
-<p><% @sofas.each do |sofa|  %></p>
-  <li><%= sofa.name %></li>
-  <li><%= sofa.description %></li>
-  <li><%= sofa.price_per_day %></li>
-  <%= link_to "View Details", sofa_path(sofa.id)  %>
-<% end %>
-
-
-
+<h1>Sofas directory</h1>
 <div class="list-sofa">
-  <% @sofas.each do |sofa| %>
-    <img class="thumb-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-    <div class="list-sofa-name">
-      <h3><%= @sofa.name %></h3>
-      <p><%= @sofa.location %></p>
-    </div>
-    <div class="list-sofa-body">
-      <p><strong><%= @sofa.description %></strong></p>
-      <p><%= link_to "View Details", sofa_path(sofa.id)  %></p>
-    </div>
-    <div class="list-sofa-status">
-      <p class="status pending">Pending</p>
-      <p class="list-sofa-price_per_day"><%= @sofa.price_per_day %></p>
-    </div>
-  <% end %>
+  <ul>
+    <ol>
+    <% @sofas.each do |sofa| %>
+      <img class="thumb-large" src="https://ksassets.timeincuk.net/wp/uploads/sites/56/2018/08/Autumnal-sofa-trends-global-625x500.jpg">
+      <div class="list-sofa-name">
+        <h3><%= sofa.name %></h3>
+        <p><%= sofa.location %></p>
+      </div>
+      <div class="list-sofa-body">
+        <p><strong><%= sofa.description %></strong></p>
+        <p><%= link_to "View Details", sofa_path(sofa.id)  %></p>
+      </div>
+      <div class="list-sofa-status">
+        <p class="status pending">Pending</p>
+        <p class="list-sofa-price_per_day"><%= sofa.price_per_day %></p>
+      </div>
+    <% end %>
+    </ol>
+  </ul>
 </div>
 
