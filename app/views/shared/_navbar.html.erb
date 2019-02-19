@@ -11,7 +11,9 @@
     <%= link_to new_sofa_path, class: 'navbar-canapyay-link' do %>
       <div class="navbar-canapyay-item">Add a sofa</div>
     <% end %>
-    <a href="" class="navbar-canapyay-item navbar-canapyay-link">Sofa experiences</a>
+    <%= link_to new_user_session_path do  %>
+      <div class="navbar-canapyay-item">Login</div>
+    <% end %>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-canapyay-item">
@@ -20,9 +22,11 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-canapyay-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
-          <li><%= link_to destroy_user_session_path, method: :delete, class: 'navbar-canapyay-link' do %>
-            <div>Log out</div>
-          <% end %></li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete, class: 'navbar-canapyay-link' do %>
+              <div>Log out</div>
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
