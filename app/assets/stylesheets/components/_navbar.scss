@@ -43,7 +43,7 @@
 .navbar-canapyay-link:hover {
   color: #da552f;
   text-decoration: none;
-}
+ }
 
 /* Dropdown menu */
 .navbar-canapyay-dropdown-menu {
@@ -62,6 +62,7 @@
 .navbar-canapyay-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
+   text-decoration: none;
 }
 .navbar-canapyay-dropdown-menu:before {
   content: ' ';
