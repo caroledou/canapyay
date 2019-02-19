@@ -1,2 +1,13 @@
-<h1>Make a booking</h1>
-<p></p>
+<div class="container">
+  <h1>Book "<%= @sofa.name %>"</h1>
+    <%= simple_form_for [@sofa, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= link_to sofas_path do %>
+      <%= f.submit "Confirm", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+
+
+
+</div>
