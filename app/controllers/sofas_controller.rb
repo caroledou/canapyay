@@ -13,6 +13,10 @@ class SofasController < ApplicationController
     redirect_to sofas_path
   end
 
+  def show
+    @sofa = Sofa.find(params[:id])
+  end
+
   private
 
   def sofa_params
