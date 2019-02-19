@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def new
-    # @sofa = Sofa.find(params[:sofa_id])
-    # @booking = Booking.new
+    @sofa = Sofa.find(params[:sofa_id])
+    @booking = Booking.new
   end
 
   def create
