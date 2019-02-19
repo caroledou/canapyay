@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Your booking</h1>
+  <p>Hey, <%= @booking.user.email %>, you booked:</p>
+  <ul class="list-unstyled">
+    <li><%= @booking.sofa.name %></li>
+    <li>( <%= @booking.sofa.capacity %> places)</li>
+    <li>From <%= @booking.start_date %> to <%= @booking.end_date %></li>
+    <li>For $ <%= @booking.sofa.price_per_day %> per day</li>
+  </ul>
+  <h4>Enjoy it!</h4>
+<%= link_to 'Home', sofas_path %>
+</div>
+
