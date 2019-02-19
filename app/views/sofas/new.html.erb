@@ -1,15 +1,18 @@
-<h1>Add a Sofa</h1>
-<%= simple_form_for(@sofa) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :location %>
-  <%= f.input :price_per_day %>
-  <%= f.input :capacity %>
-  <%= f.input :comfort %>
-  <%= f.input :age %>
-  <%= f.input :wineproof %>
-  <%= f.input :bed %>
-  <%= f.submit "Add a sofa", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>Add a Sofa</h1>
+  <%= simple_form_for(@sofa) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :location %>
+    <%= f.input :price_per_day %>
+    <%= f.input :capacity %>
+    <%= f.input :comfort %>
+    <%= f.input :age %>
+    <%= f.input :wineproof %>
+    <%= f.input :bed %>
+    <%= f.submit "Add a sofa", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
 
 
