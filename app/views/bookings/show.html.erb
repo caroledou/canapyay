@@ -1,4 +1,8 @@
-<h1>Your booking</h1>
-<p>You booked the <%= @booking.sofa.name %> from <%= @booking.start_date %> to <%= @booking.end_date %></p>
+<div class="container">
+  <h1>Your booking</h1>
+  <p>Hey, <%= @booking.user.email! %></p>
+    You booked the <strong><%= @booking.sofa.name %></strong></p>
 
-<h4>Enjoy it!</h4>
+  <h4>Enjoy it!</h4>
+</div>
+
