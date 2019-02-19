@@ -3,46 +3,48 @@
   <div class="banner-content">
     <h1>Welcome to CanapYAY</h1>
     <p>Need an extra sofa? Rent it easily, delivered to your home</p>
-    <div class="container">
-      <form id="sofa-browser" class="form-group">
-        <div class="row">
-          <div class="form-inline">
-            <div class="form-group">
-              <label for="InputStartDate"><h4>Start Date</h4></label>
-              <input type="text" class="form-control" placeholder="DD-MM-YYYY">
-            </div>
-            <div class="form-group">
-              <label for="InputEndDate"><h4>End Date</h4></label>
-              <input type="text" class="form-control" placeholder="DD-MM-YYYY">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-inline">
-            <div class="form-group">
-              <label for="InputLocation"><h4>Location</h4></label>
-              <input type="text" class="form-control" placeholder="Any Location">
-            </div>
-            <div class="form-group">
-              <label for="InputCapacity"><h4>Seat Capacity</h4></label>
-              <input type="text" class="form-control" placeholder="Number of People">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <%= link_to sofas_path do %>
-            <input type="submit" class="btn btn-primary" value="Browse Sofas">
-          <% end %>
-        </div>
-
-      </form>
-    </div>
+    <%= link_to sofas_path do  %>
       <button type="button" class="btn btn-primary">See all sofas</button>
+    <% end %>
   </div>
 </div>
+<!-- <div class="container">
+  <form id="sofa-browser" class="form-group">
+    <div class="row">
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="InputStartDate"><h4>Start Date</h4></label>
+          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
+        </div>
+        <div class="form-group">
+          <label for="InputEndDate"><h4>End Date</h4></label>
+          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-inline">
+        <div class="form-group">
+          <label for="InputLocation"><h4>Location</h4></label>
+          <input type="text" class="form-control" placeholder="Any Location">
+        </div>
+        <div class="form-group">
+          <label for="InputCapacity"><h4>Seat Capacity</h4></label>
+          <input type="text" class="form-control" placeholder="Number of People">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <%= link_to sofas_path do %>
+        <input type="submit" class="btn btn-primary" value="Browse Sofas">
+      <% end %>
+    </div>
 
-
-<div>
+  </form>
 </div>
 
 
+
+
+
+ -->
