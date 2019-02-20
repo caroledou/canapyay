@@ -1,26 +1,25 @@
+
+<h1>Sofas directory</h1>
+
 <div class="container">
-  <h1>Sofas directory</h1>
-  <div class="list-sofa">
-    <ul>
-      <ol>
-      <% @sofas.each do |sofa| %>
-        <img class="thumb-large" src="https://ksassets.timeincuk.net/wp/uploads/sites/56/2018/08/Autumnal-sofa-trends-global-625x500.jpg">
-        <div class="list-sofa-name">
-          <h3><%= sofa.name %></h3>
-          <p><%= sofa.location %></p>
+  <div class="row">
+    <% @sofas.each do |sofa| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://ksassets.timeincuk.net/wp/uploads/sites/56/2018/08/Autumnal-sofa-trends-global-625x500.jpg');">
+          <div class="card-location">
+            <%= sofa.location %>
+          </div>
+          <div class="card-name">
+            <h2><%= sofa.name %></h2>
+          </div>
+          <div class="card-description">
+          </div>
+          <img class="card-user" src="https://zurich.impacthub.ch/wp-content/uploads/2016/04/16_Web_Preview_CaroleDouchy-270x162.jpg">
+          <a class="card-link" href="#" ></a>
         </div>
-        <div class="list-sofa-body">
-          <p><strong><%= sofa.description %></strong></p>
-          <p><%= link_to "View Details", sofa_path(sofa.id)  %></p>
-        </div>
-        <div class="list-sofa-status">
-          <p class="status pending">Pending</p>
-          <p class="list-sofa-price_per_day"><%= sofa.price_per_day %></p>
-        </div>
-      <% end %>
-      </ol>
-    </ul>
+        <p><%= sofa.description %></p>
+        <%= link_to "View Details", sofa_path(sofa.id)  %>
+      </div>
+    <% end %>
   </div>
 </div>
-
-
