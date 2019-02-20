@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_103711) do
     t.text "short_description"
     t.float "latitude"
     t.float "longitude"
+    t.string "photo"
   end
 
   create_table "users", force: :cascade do |t|
