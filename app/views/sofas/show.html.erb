@@ -8,6 +8,7 @@
   <p><b>Comfort level: </b> <%= @sofa.comfort %></p>
   <p><b>Wineproof? </b> <%= @sofa.wineproof %></p>
   <p><b>Bed convertible? </b><%= @sofa.bed %></p>
+  <%= cl_image_tag @sofa.photo, height: 300, width: 400, crop: :fill %>
 
   <%= link_to new_sofa_booking_path(@sofa.id) do %>
     <button>Book</button>
