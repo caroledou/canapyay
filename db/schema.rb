@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_103711) do
     t.boolean "bed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.string "address"
     t.text "short_description"
     t.float "latitude"
