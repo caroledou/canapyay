@@ -2,6 +2,7 @@
 <h1>Sofas directory</h1>
 
 <div class="container">
+
   <div class="row">
     <% @sofas.each do |sofa| %>
       <div class="col-xs-12 col-sm-4">
@@ -18,7 +19,7 @@
           <a class="card-link" href="#" ></a>
         </div>
         <p><%= sofa.description %></p>
-        <%= link_to "View Details", sofa_path(sofa.id)  %>
+        <%= link_to "View Details", sofa_path(sofa.id), class: "link-to-button"  %>
       </div>
     <% end %>
   </div>
