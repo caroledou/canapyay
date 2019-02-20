@@ -9,7 +9,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.sofa = @sofa
     @booking.user = current_user
-    if @booking.save
+
+    if @booking.save!
       redirect_to booking_path(@booking.id)
     else
       render :new
