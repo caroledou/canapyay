@@ -31,7 +31,8 @@ sofas_attribute = [
   comfort: 10,
   age: 1,
   wineproof: false,
-  bed: false
+  bed: false,
+  address: "Rue Saint-Roch 4, 1004 Lausanne"
 },
 {
   name: "Art-déco Sofa",
