@@ -1,0 +1,30 @@
+.dashboard {
+  width: 800px;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+}
+.dashboard h1 {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.dashboard p {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.dashboard h5 {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
