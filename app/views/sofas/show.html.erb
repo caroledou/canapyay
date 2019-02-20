@@ -1,17 +1,22 @@
 <div class="container">
   <h1><%= @sofa.name %></h1>
-  <p><%= @sofa.description %></p>
-  <p><b>Location: </b> <%= @sofa.location %></p>
-  <p><b>Price per day: </b> <%= @sofa.price_per_day %></p>
-  <p><b>Capacity: </b> <%= @sofa.capacity %></p>
-  <p><b>Age: </b> <%= @sofa.age %></p>
-  <p><b>Comfort level: </b> <%= @sofa.comfort %></p>
-  <p><b>Wineproof? </b> <%= @sofa.wineproof %></p>
-  <p><b>Bed convertible? </b><%= @sofa.bed %></p>
-  <%= cl_image_tag @sofa.photo, height: 300, width: 400, crop: :fill %>
-
+  <div id="container-show">
+    <div class="container-picture">
+      <%= cl_image_tag @sofa.photo, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div class="container-content">
+      <p><%= @sofa.description %></p>
+      <p><b>Location: </b> <%= @sofa.location %></p>
+      <p><b>Price per day: </b> <%= @sofa.price_per_day %></p>
+      <p><b>Capacity: </b> <%= @sofa.capacity %></p>
+      <p><b>Age: </b> <%= @sofa.age %></p>
+      <p><b>Comfort level: </b> <%= @sofa.comfort %></p>
+      <p><b>Wineproof? </b> <%= @sofa.wineproof %></p>
+      <p><b>Bed convertible? </b><%= @sofa.bed %></p>
+    </div>
+  </div>
   <%= link_to new_sofa_booking_path(@sofa.id) do %>
-    <button>Book</button>
+      <button>Book</button>
   <% end %>
 
   <%= link_to "Back to list", sofas_path, class: "link-to-button" %>

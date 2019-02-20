@@ -2,3 +2,15 @@
   margin-bottom: 30px;
   min-height: calc(100vh - 100px);
 }
+
+#container-show {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+
+.container-content {
+  margin-left: 30px;
+}
+
