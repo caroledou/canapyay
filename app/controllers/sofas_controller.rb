@@ -15,6 +15,7 @@ class SofasController < ApplicationController
 
   def show
     @sofa = Sofa.find(params[:id])
+    @markers = [{lng: @sofa.longitude, lat: @sofa.latitude}]
   end
 
   private
