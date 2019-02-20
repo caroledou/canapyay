@@ -41,6 +41,13 @@ sofa_louis = Sofa.new(name: "Louis XIV Sofa", description: "Refined sofa from 16
 sofa_louis.remote_photo_url = url
 sofa_louis.save
 
+puts "Creating 1 booking"
+booking1 = Booking.new(start_date: '19/04/2019', end_date: '23/04/2019')
+booking1.user = User.first
+booking1.sofa = sofa_louis
+booking1.save
+
+
 puts "Done"
 
 
