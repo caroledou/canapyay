@@ -18,6 +18,12 @@ class SofasController < ApplicationController
 
   def show
     @sofa = Sofa.find(params[:id])
+    @markers = [{
+      lng: @sofa.longitude,
+      lat: @sofa.latitude,
+      infoWindow: render_to_string(partial: "infowindow", locals: { howmuch: @sofa.price_per_day }),
+      image_url: helpers.asset_url('sofa_circle.png')
+    }]
   end
 
   private
