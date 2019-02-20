@@ -10,9 +10,7 @@
   <p><b>Bed convertible? </b><%= @sofa.bed %></p>
   <%= cl_image_tag @sofa.photo, height: 300, width: 400, crop: :fill %>
 
-  <%= link_to new_sofa_booking_path(@sofa.id) do %>
-    <button>Book</button>
-  <% end %>
+  <%= link_to "Book", new_sofa_booking_path(@sofa.id), class: "link-to-button" unless current_user.nil? %>
 
   <%= link_to "Back to list", sofas_path, class: "link-to-button" %>
 </div>
