@@ -5,6 +5,7 @@
   background-position: center;
   color: white;
   position: relative;
+  margin-bottom: 30px;
 }
 .card-user {
   position: absolute;
@@ -27,6 +28,16 @@
   left: 10px;
   font-size: 25px;
   font-weight: lighter;
+}
+
+.card-name h2 {
+  text-decoration: none;
+  color: white;
+}
+
+.card-name:hover h2 {
+  text-decoration: none;
+  color: #F26F29;
 }
 
 .card-description {
