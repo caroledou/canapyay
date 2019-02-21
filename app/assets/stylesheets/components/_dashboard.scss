@@ -29,3 +29,10 @@
   text-align: left;
 }
 
+.dashboard-map {
+  position: relative;
+}
+
+.mapboxgl-canvas{
+  position: static;
+}
