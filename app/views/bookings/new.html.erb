@@ -1,10 +1,16 @@
 <div class="container">
   <h1>Book "<%= @sofa.name %>"</h1>
     <%= simple_form_for [@sofa, @booking] do |f| %>
-    <%= f.input :start_date, label: "Start date (DD/MM/YYYY)" %>
-    <%= f.input :end_date, label: "End date (DD/MM/YYYY)" %>
-    <%= link_to sofas_path do %>
-      <%= f.submit "Confirm", class: "link-to-button" %>
+    <div class="row">
+      <div class="col-xs-6">
+        <%= f.input :start_date, label: "Start date (DD/MM/YYYY)" %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :end_date, label: "End date (DD/MM/YYYY)" %>
+      </div>
+    </div>
+      <%= link_to sofas_path do %>
+        <%= f.submit "Confirm", class: "link-to-button" %>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
