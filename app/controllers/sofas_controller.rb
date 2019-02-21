@@ -1,6 +1,23 @@
 class SofasController < ApplicationController
   def index
-    @sofas = Sofa.all
+    puts "JE SUIS DASNS LE CONTROLLEUR"
+    if params[:location].present? && params[:capacity].blank? && params[:km].blank?
+      @sofas = Sofa.near(params[:location])
+    elsif params[:location].blank? && params[:capacity].present? && params[:km].blank?
+      @sofas = Sofa.where(capacity: params[:capacity])
+    elsif params[:location].present? && params[:capacity].present? && params[:km].blank?
+      @sofas = Sofa.near(params[:location])
+      @sofas = @sofas.where(capacity: params[:capacity])
+    elsif params[:location].present? && params[:capacity].blank? && params[:km].present?
+      @sofas = Sofa.near(params[:location], params[:km])
+    elsif params[:location].blank? && params[:capacity].present? && params[:km].present?
+      @sofas = Sofa.where(capacity: params[:capacity])
+    elsif params[:location].present? && params[:capacity].present? && params[:km].present?
+      @sofas = Sofa.near(params[:location], params[:km])
+      @sofas = @sofas.where(capacity: params[:capacity])
+    else
+      @sofas = Sofa.all
+    end
   end
 
   def new
