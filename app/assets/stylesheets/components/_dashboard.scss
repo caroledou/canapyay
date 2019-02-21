@@ -3,22 +3,8 @@
   padding: 30px;
   background-color: white;
   margin: auto;
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
-}
-.dashboard h1 {
-  text-align: left;
-  margin-left: 40px;
-}
-
-.dashboard p {
-  text-align: left;
-  margin-left: 40px;
-}
-
-.dashboard h5 {
-  text-align: left;
-  margin-left: 40px;
 }
 
 .dashboard-content {
@@ -27,6 +13,7 @@
   align-items: center;
   margin-bottom: 30px;
   text-align: left;
+  margin-left: 0px;
 }
 
 .dashboard-map {
