@@ -3,10 +3,10 @@
     <%= simple_form_for [@sofa, @booking] do |f| %>
     <div class="row">
       <div class="col-xs-6">
-        <%= f.input :start_date, label: "Start date (DD/MM/YYYY)", input_html: {class: "datepicker"} %>
+        <%= f.input :start_date, input_html: {class: "datepicker"} %>
       </div>
       <div class="col-xs-6">
-        <%= f.input :end_date, label: "End date (DD/MM/YYYY)", input_html: {id: "secondRangeInput"} %>
+        <%= f.input :end_date, input_html: {id: "secondRangeInput"} %>
       </div>
     </div>
       <%= link_to sofas_path do %>
