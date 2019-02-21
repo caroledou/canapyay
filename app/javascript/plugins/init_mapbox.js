@@ -32,8 +32,11 @@ const initMapbox = () => {
           .addTo(map);
     });
     fitMapToMarkers(map, markers);
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    // map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
   }
+  var mapCenter = document.getElementsByClassName("mapboxgl-canvas");
+  mapCenter[0].style.position = "relative";
+
 };
 
 export { initMapbox };
