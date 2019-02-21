@@ -20,7 +20,7 @@
       <div class="dropdown">
         <img src="https://zurich.impacthub.ch/wp-content/uploads/2016/04/16_Web_Preview_CaroleDouchy-270x162.jpg" class="avatar dropdown-toggle" id="navbar-canapyay-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-canapyay-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li> <%= link_to "Profile", user_path %> </li>
           <li><a href="#">Dashboard</a></li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete, class: 'navbar-canapyay-link' do %>
