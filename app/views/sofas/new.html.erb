@@ -1,20 +1,43 @@
 <div class="container">
   <h1>Add a Sofa</h1>
-  <%= simple_form_for(@sofa) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :location %>
-    <%= f.input :price_per_day %>
-    <%= f.input :capacity %>
-    <%= f.input :comfort %>
-    <%= f.input :age %>
-    <%= f.input :wineproof %>
-    <%= f.input :bed %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Add a sofa", class: "link-to-button" %>
-  <% end %>
+    <%= simple_form_for(@sofa) do |f| %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :name, placeholder: 'Modern Sofa' %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :location, placeholder: 'Geneva' %>
+          </div>
+        </div>
+        <%= f.input :description, placeholder: 'Very comfortable leather sofa' , hint: '40 caracters maxmimum'  %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :price_per_day, placeholder: '$' %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :capacity, placeholder: '4' %>
+          </div>
+        </div>
+        <%= f.input :photo, hint: 'Please upload a photo of your sofa' %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :comfort, placeholder: '4', hint: 'From 1 (not comfortable at all) to 10 (very very comfortable)' %>
+          </div>
+          <div class="col-xs-6">
+             <%= f.input :age, label: 'Sofa age', placeholder: '2' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :wineproof %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :bed %>
+          </div>
+        </div>
+        <%= f.submit "Add sofa", class: "link-to-button" %>
+    <% end %>
 </div>
-
 
 
