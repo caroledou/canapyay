@@ -27,7 +27,7 @@ class SofasController < ApplicationController
   def create
     @sofa = Sofa.new(sofa_params)
     if @sofa.save
-      redirect_to sofas_path
+      redirect_to sofa_path(@sofa.id)
     else
       render :new
     end

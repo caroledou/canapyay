@@ -6,11 +6,10 @@
             <%= f.input :name, placeholder: 'Modern Sofa' %>
           </div>
           <div class="col-xs-6">
-            <%= f.input :location, placeholder: 'Geneva' %>
+            <%= f.input :address, id: "address-input", placeholder: '16, rue Sautter, Geneva' %>
           </div>
         </div>
         <%= f.input :description, placeholder: 'Very comfortable leather sofa' , hint: '40 caracters maxmimum'  %>
-        <%= f.input :address, id: "address-input", placeholder: '16, rue Sautter, Geneva' %>
         <div class="row">
           <div class="col-xs-6">
             <%= f.input :price_per_day, placeholder: '$' %>
