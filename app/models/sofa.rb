@@ -1,5 +1,4 @@
 class Sofa < ApplicationRecord
-  belongs_to :user
   has_many :users, through: :bookings
   validates :name, :description, :capacity, :price_per_day, :address, :photo, presence: true
   validates :description, length: { maximum: 40 }
