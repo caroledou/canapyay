@@ -6,13 +6,12 @@
         <%= cl_image_tag @sofa.photo, height: 300, width: 400, crop: :fill %>
       </div>
       <div>
-        <p><b>Location: </b> <%= @sofa.location %></p>
-        <p><b>Price per day: </b> <%= @sofa.price_per_day %></p>
+        <p><b>Price per day: </b> $<%= @sofa.price_per_day %></p>
         <p><b>Capacity: </b> <%= @sofa.capacity %></p>
         <p><b>Age: </b> <%= @sofa.age %></p>
         <p><b>Comfort level: </b> <%= @sofa.comfort %></p>
-        <p><b>Wineproof? </b> <%= @sofa.wineproof %></p>
-        <p><b>Bed convertible? </b><%= @sofa.bed %></p>
+        <p><b>Wineproof? </b> <%= @sofa.wineproof ? '😃' : '☹️' %></p>
+        <p><b>Bed convertible? </b><%= @sofa.bed ? '😃' : '☹️' %></p>
       </div>
     </div>
     <h5>Description</h5>
