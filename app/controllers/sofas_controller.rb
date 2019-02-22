@@ -46,6 +46,6 @@ class SofasController < ApplicationController
   private
 
   def sofa_params
-    params.require(:sofa).permit(:name, :description, :location, :price_per_day, :capacity, :comfort, :age, :wineproof, :bed, :photo, :address)
+    params.require(:sofa).permit(:name, :description, :location, :price_per_day, :capacity, :comfort, :age, :wineproof, :bed, :photo, :photo_cache, :address)
   end
 end
