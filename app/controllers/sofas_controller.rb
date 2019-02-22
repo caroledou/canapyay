@@ -38,7 +38,7 @@ class SofasController < ApplicationController
     @markers = [{
       lng: @sofa.longitude,
       lat: @sofa.latitude,
-      infoWindow: render_to_string(partial: "infowindow", locals: { howmuch: @sofa.price_per_day }),
+      infoWindow: render_to_string(partial: "infowindow", locals: { address: @sofa.address }),
       image_url: helpers.asset_url('sofa_circle.png')
     }]
   end
@@ -46,6 +46,6 @@ class SofasController < ApplicationController
   private
 
   def sofa_params
-    params.require(:sofa).permit(:name, :description, :location, :price_per_day, :capacity, :comfort, :age, :wineproof, :bed, :photo)
+    params.require(:sofa).permit(:name, :description, :location, :price_per_day, :capacity, :comfort, :age, :wineproof, :bed, :photo, :address)
   end
 end
