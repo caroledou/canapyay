@@ -26,7 +26,7 @@ button:hover {
   background-color: #F2A67D;
   border: solid 1px #F2A67D;
   text-decoration: none;
-   color: white;
+  color: white;
 }
 
 #button-center {
@@ -42,4 +42,8 @@ button:hover {
 #button-center:hover {
   background-color: #e55a14;
   border: solid 1px #e55a14;
+}
+
+#profile {
+  margin: auto;
 }

@@ -3,9 +3,9 @@
     <h1>Your booking</h1>
     <div class="dashboard-content">
       <div>
-        <p>Hey, <%= @booking.user.email %>, you booked:</p>
+        <p>Hey <strong><%= @booking.user.name %></strong>, you booked:</p>
         <ul class="list-unstyled">
-          <li>Sofa: <%= @booking.sofa.name %></li>
+          <li><strong><%= @booking.sofa.name %></strong></li>
           <li>Seat capacity: ( <%= @booking.sofa.capacity %> places)</li>
           <li>From <%= @booking.start_date %> to <%= @booking.end_date %></li>
           <li>Number of days booked: <%= (@booking.end_date.to_date - @booking.start_date.to_date).to_i %></li>
@@ -17,7 +17,7 @@
         <%= cl_image_tag @booking.sofa.photo, height: 200, width: 300, crop: :fill %>
       </div>
     </div>
+    <%= link_to 'My Profile', profile_path(current_user), class: "link-to-button" %>
   </div>
-  <%= link_to 'Home', sofas_path, class: "link-to-button" %>
 </div>
 
