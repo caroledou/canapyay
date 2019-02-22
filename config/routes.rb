@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :bookings, only: :show
   devise_for :users
 
-  resources :profiles, only: [:show, :edit]
+  resources :profiles, only: [:show, :edit, :update]
 
 
   root to: 'pages#home'

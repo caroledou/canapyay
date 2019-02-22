@@ -11,7 +11,7 @@
     <p><b>About Me:     </b> <%= @user.about_me %></p>
   </div>
 
-  <p><%= link_to "Edit Profile", edit_profile_path, class: "link-to-button" %></p>
-  <p><%= link_to "Change Password", edit_user_password_path, class: "link-to-button" %></p>
+  <p><%= link_to "Edit Profile", edit_profile_path(@user), class: "link-to-button" %></p>
+  <p><%= link_to "Change Password", edit_user_registration_path, class: "link-to-button" %></p>
 
 </div>

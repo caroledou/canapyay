@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Edit my profile</h1>
-    <%= simple_form_for(@user) do |f| %>
+    <%= simple_form_for(@user, url: profile_path, id: params[:id], method: :patch) do |f| %>
         <div class="row">
           <div class="col-xs-6">
             <%= f.input :name, placeholder: 'Your name' %>
@@ -9,14 +9,19 @@
             <%= f.input :surname, placeholder: 'Your Surname' %>
           </div>
         </div>
-        <%= f.input :about_me, placeholder: 'your bio' , hint: '500 caracters maximum'  %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :birthdate, placeholder: 'DD/MM/YYYY' %>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xs-6">
             <%= f.input :phone_number, placeholder: 'your phone number' %>
           </div>
         </div>
-        <%= f.input :photo, hint: 'Please upload a picture profile' %>
-        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.input :about_me, placeholder: 'your bio' , hint: '500 caracters maximum'  %>
         <%= f.submit "Update Profile", class: "link-to-button" %>
     <% end %>
 </div>
+
+
