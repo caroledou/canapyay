@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   resources :bookings, only: :show
   devise_for :users
 
+  resources :profiles, only: [:show, :edit]
+
 
   root to: 'pages#home'
 
-  get '/profiles/:id', to: 'profiles#show', as: :profile
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
