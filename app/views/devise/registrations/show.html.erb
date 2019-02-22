@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h1>Add a Sofa</h1>
+    <%= simple_form_for(@user) do |f| %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :name, placeholder: 'Thibault' %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :surname, placeholder: 'Jaime' %>
+          </div>
+        </div>
+        <%= f.input :about_me, placeholder: 'Tell us a little bit about yourself' , hint: '200 caracters max'  %>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :birthdate, placeholder: 'dd/mm/yyyy' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :phone_number, placeholder: '123456765' %>
+          </div>
+        </div>
+    <% end %>
+</div>
